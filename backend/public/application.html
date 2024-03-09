@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apply for Job | Job Match Pro</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Apply for Job</h1>
+    </header>
+
+    <main>
+        <!-- Note the addition of enctype and method attributes -->
+        <form id="jobApplicationForm" class="application-form" action="/api/job-applications" method="post" enctype="multipart/form-data">
+            <label for="applicantName">Your Name:</label>
+            <input type="text" id="applicantName" name="applicantName" required>
+
+            <label for="applicantEmail">Your Email:</label>
+            <input type="email" id="applicantEmail" name="applicantEmail" required>
+
+            <label for="applicantCoverLetter">Your Cover Letter:</label>
+            <textarea id="applicantCoverLetter" name="applicantCoverLetter"></textarea>
+
+            <label for="resumeUpload">Upload Resume:</label>
+            <!-- Note the name attribute should match the backend expected field -->
+            <input type="file" id="resumeUpload" name="resume" accept="application/pdf" required>
+
+            <button type="submit">Submit Application</button>
+        </form>
+        <!-- Confirmation messages -->
+        <div id="resume-upload-confirmation" class="upload-confirmation hidden">
+            <span class="checkmark">&#10004;</span> Resume Uploaded Successfully!
+        </div>
+        <div id="form-submission-confirmation" class="submission-confirmation hidden">
+            <span class="checkmark">&#10004;</span> Application Submitted Successfully!
+        </div>
+    </main>
+
+    <!-- You'll need JavaScript to handle the form submission properly -->
+    <script src="application.js"></script>
+</body>
+</html>

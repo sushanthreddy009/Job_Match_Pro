@@ -1,0 +1,222 @@
+/* Basic Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Body & Typography */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(45deg, #ff3d3d, #4286f4);
+  color: #ffffff;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background: transparent;
+  padding: 20px 0;
+  text-align: center;
+  position: relative;
+}
+
+h1 {
+  margin: 0;
+  font-size: 3rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  color: #ffffff;
+}
+
+/* Main Content */
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+/* Job Listing Cards */
+.job-listing {
+  background-color: #ffffff;
+  padding: 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.job-listing:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.2);
+}
+
+/* Titles */
+.job-listing h3,
+.job-listing a,
+.application-form label,
+.registration-form label {
+  color: #222;
+}
+
+/* Buttons */
+.apply-button,
+.employer-registration-button {
+  display: inline-block;
+  background-color: #22c55e;
+  color: white;
+  padding: 12px 24px;
+  text-decoration: none;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* No hover effect for the buttons as requested */
+/*.apply-button:hover,
+.employer-registration-button:hover {
+  background-color: #15803d;
+  transform: translateY(-2px);
+}*/
+
+/* Form Styles */
+.application-form label,
+.registration-form label {
+  display: block;
+  margin-top: 20px;
+  color: #222;
+}
+
+.application-form input,
+.application-form textarea,
+.registration-form input,
+.registration-form textarea,
+.registration-form select {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background: #ffffff;
+}
+
+.application-form input[type='file'],
+.registration-form input[type='file'] {
+  color: black; /* Ensures text is black and visible */
+}
+
+/* Adjustments for the file input button */
+.application-form input[type='file']::file-selector-button,
+.registration-form input[type='file']::file-selector-button {
+  background-color: #ddd;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+  margin-right: 4px;
+  cursor: pointer;
+}
+
+.application-form input[type='file']::file-selector-button:hover,
+.registration-form input[type='file']::file-selector-button:hover {
+  background-color: #ccc;
+}
+
+/* Submit Button Styles */
+.application-form button[type='submit'],
+.registration-form button[type='submit'] {
+  background-color: #4a90e2; /* Blue background for the submit button */
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  display: block; /* Ensure it doesn't display inline */
+  width: auto; /* Automatic width based on content */
+  margin: 20px auto; /* Centered margin */
+}
+
+/* Style adjustments for the footer */
+footer {
+  background: transparent;
+  color: #ffffff;
+  text-align: center;
+  padding: 20px 0;
+  position: relative; /* Changed from fixed to relative */
+  bottom: 0;
+  width: 100%;
+}
+
+/* Confirmation Messages */
+.upload-confirmation,
+.submission-confirmation {
+  color: #28a745;
+  font-size: 1em;
+  margin-top: 10px;
+  display: none;
+}
+
+/* Responsive Styles */
+@media only screen and (max-width: 768px) {
+  .apply-button,
+  .employer-registration-button {
+    display: block; /* Full width for smaller screens */
+    margin: 20px auto; /* Center align on mobile */
+  }
+  
+  .application-form,
+  .registration-form {
+    width: auto;
+  }
+  
+  main {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+}
+
+/* Title Visibility Improvements */
+.job-title-visibility {
+  color: #222; /* Dark color for better visibility */
+  background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent background for contrast */
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  display: block;
+  text-align: center;
+}
+
+/* Adjustments for form elements to stack them vertically */
+.application-form input,
+.application-form textarea,
+.registration-form input,
+.registration-form textarea,
+.registration-form select {
+  margin-bottom: 15px; /* Consistent bottom margin for spacing */
+}
+
+/* Ensure that the submit button doesn't have a margin at the bottom */
+.application-form button[type='submit'],
+.registration-form button[type='submit'] {
+  margin-bottom: 0; /* Remove the bottom margin */
+}
